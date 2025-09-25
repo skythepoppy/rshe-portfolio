@@ -40,3 +40,43 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Sidebar - always open */
+.sidebar {
+  background-color: #8fa4b6; /* dark blue-gray */
+  color: white;
+  width: 200px; /* always full width */
+  border-radius: 15px;
+  padding: 10px;
+  height: auto;      /* adjust to content */
+  align-self: flex-start;
+  margin: 10px;
+  overflow: visible; /* show all content */
+}
+
+/* Sidebar menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar ul li:hover {
+  background: #334155; /* hover highlight */
+  border-radius: 10px;
+}
+
+/* Main content */
+.content {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+
