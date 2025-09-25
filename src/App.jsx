@@ -1,6 +1,9 @@
 import "./App.css";
 import logo from './assets/Raphael_Evangelista.png';
 import myPhoto from './assets/me.jpg';
+import { FaLaptopCode, FaUserFriends, FaCode } from "react-icons/fa";
+
+
 
 export default function App() {
   return (
@@ -29,12 +32,83 @@ export default function App() {
           </div>
         </section>
 
+        <nav />
+
+        <section className="skills">
+          <div className="card">
+            <FaCode className="card-icon" />
+            <h3>Front-End</h3>
+            <p>I like to experiment and code things from scratch with an emphasis on functionality
+              , in order to bring ideas to life on the browser.</p>
+            <p>
+              <span style={{ color: '#d26640', fontWeight: 'bold' }}>
+                Things I enjoy designing:
+              </span>
+              <br />
+              Web Apps, Landing Pages, Dashboards, UI, Responsive Layouts
+            </p>
+            <p>
+              <span style={{ color: '#d26640', fontWeight: 'bold' }}>
+                Dev Tools:
+              </span>
+              <br />
+              HTML/CSS, Javascript, React, TailwindCSS, Bootstrap, Context APIs, Hooks, 
+            </p>
+          </div>
+
+          <div className="card">
+            <FaLaptopCode className="card-icon" />
+            <h3>Back-End</h3>
+            <p>
+              I enjoy creating server-side applications, working with databases, APIs, and understanding server logic.
+            </p>
+            <p>
+              <span style={{ color: '#d26640', fontWeight: 'bold' }}>
+                Things I enjoy building:
+              </span>
+              <br />
+              RESTful APIs, Authentication Systems, Database Schemas, Server-Side Logic
+            </p>
+            <p>
+              <span style={{ color: '#d26640', fontWeight: 'bold' }}>
+                Dev Tools:
+              </span>
+              <br />
+              Python, Javascript, Java, Node.js/Express, Django/Flask, Springboot, MySQL, PostgreSQL, SQLite, Git, Postman, JWT
+            </p>
+          </div>
+
+          <div className="card">
+            <FaUserFriends className="card-icon" />
+            <h3>Mentor</h3>
+            <p>I enjoy making sure that I connect difficult concepts to students in a way that they can relate
+              and understand.
+            </p>
+            <p>
+              <span style={{ color: '#d26640', fontWeight: 'bold' }}>
+                Experiences I draw from:
+              </span>
+              <br />
+              Remote/In-Person Mathematics and Programming Tutor (with Varsity Tutors and Club Z! Tutoring) 
+            </p>
+            <p>
+              <span style={{ color: '#d26640', fontWeight: 'bold' }}>
+                Mentor Stats:
+              </span>
+              <br />
+              3+ years tutoring experience, 4+ stars on Varsity Tutors, 5+ stars on Club Z! Tutoring, 35+ students, 960+ Tutoring Hours
+            </p>
+          </div>
+        </section>
+
         <nav/>
 
-        <section id="content">
-          <h1>Contact</h1>
-          
+        <section className="hackathons">
+          <div className="hackathon-text">
+            
+          </div>
         </section>
+
       </main>
     </div>
   );
