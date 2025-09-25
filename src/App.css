@@ -65,35 +65,39 @@
 .about-text h2 {
   margin-top: 0;
   text-align: left;
+  margin-bottom: 0;
 }
 
 .about-text p {
   line-height: 1.5;
   text-align: left;
+  font-size: 2rem;
 }
 
 .skills {
   display: flex;
-  gap: 20px;               
-  justify-content: center;  
+  gap: 20px;
+  justify-content: center;
   margin-top: 3rem;
-  flex-wrap: wrap;          
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
 .card {
-  background-color: #353535;
-  border-radius: 10px;     
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1 1 300px;  
+  max-width: 400px; 
   padding: 20px;
-  width: 250px;            
-  flex: 1 1 250px;         
+  border-radius: 10px;
+  background-color: #353535;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card h3 {
@@ -107,12 +111,47 @@
   color: #fff2ec;
   font-size: 1rem;
 }
-.card-icon{
+
+.card-icon {
   font-size: 2.5rem;
   color: #d26640;
   margin-bottom: 8px;
 }
 
+.hackathons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.hackathon-text {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  font-size:2rem;
+}
+
+.hackathon-text h3{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.hackathon-text p{
+  line-height: 1.5;
+  
+  font-size: 1rem;
+}
+
+.hackathon-photo {
+  width: 98%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
 
 
 @keyframes logo-spin {
@@ -130,8 +169,6 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-
-
 
 .read-the-docs {
   color: #888;

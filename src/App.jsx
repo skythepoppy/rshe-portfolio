@@ -1,6 +1,7 @@
 import "./App.css";
 import logo from './assets/Raphael_Evangelista.png';
 import myPhoto from './assets/me.jpg';
+import hackutd from './assets/VAIP2.jpg';
 import { FaLaptopCode, FaUserFriends, FaCode } from "react-icons/fa";
 
 
@@ -105,7 +106,28 @@ export default function App() {
 
         <section className="hackathons">
           <div className="hackathon-text">
+            <h3 >Collaboration</h3>
+            <p className="hackathon-text">One of my favorite instances of collaborative teamwork amidst like-minded individuals were the
+              hackathons I attended. 
+            </p>
+
+            <div className="card">
+            <h3  style={{ color: '#d26640', fontWeight: 'bold' }}>HackUTD</h3>
+            <img src={hackutd} alt="hackutd" className="hackathon-photo" />
+            <p>I had a great time at the 48 hour HACKUTD. As a team , we were able to complete our project
+              "Vehicular AI Presets" under the sponsor company Toyota. This project was presented to Toyota, 
+              Statefarm, and CBRE. 
+            </p>
+            <p>
+              <span style={{ color: '#d26640', fontWeight: 'bold' }}>
+                Project:
+              </span>
+              <a href="#projects" style={{fontWeight:'bold'}}>
+                 Vehicular AI Presets 
+              </a>
+            </p>
             
+          </div>
           </div>
         </section>
 
