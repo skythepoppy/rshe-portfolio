@@ -3,15 +3,6 @@ import "./App.css";
 export default function App() {
   return (
     <div style={{ display: "flex" }}>
-      <div className="sidebar">
-        <ul>
-          <li>Charts</li>
-          <li>Documentation</li>
-          <li>Calendar</li>
-        </ul>
-      </div>
-
-
       {/* Main content */}
       <main className="content">
         <h1>Hello, I’m Raphael 👋</h1>
