@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import logo from './assets/Raphael_Evangelista.png';
 import { Link } from 'react-router-dom';
@@ -7,9 +7,10 @@ import "./Contact.css";
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: "",
-        email: "",
+        user_email: "",
         message: "",
     });
+    const form = useRef(); 
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,13 +19,12 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs
-            .send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                formData,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-            )
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            form.current, 
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
             .then(
                 (result) => {
                     console.log(result.text);
@@ -40,18 +40,15 @@ export default function Contact() {
 
     return (
         <div className="contact-container">
-            <img
-                src={logo}
-                alt="My Logo"
-                className="logo"
-            />
+            <img src={logo} alt="My Logo" className="logo" />
             <nav>
                 <Link to="/home">Home</Link> /
                 <Link to="/my-works">My Work</Link> /
                 <Link to="/contact">Contact</Link>
             </nav>
             <h2>Contact Me</h2>
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <p>Feel free to contact me here or email me directly at: <p style={{fontStyle:'bold'}}>raphaelsebastien.evangelista@gmail.com</p></p>
+            <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                 <input
                     type="text"
                     name="name"
@@ -81,8 +78,3 @@ export default function Contact() {
         </div>
     );
 }
-
-
-
-
-
