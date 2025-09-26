@@ -14,7 +14,6 @@ export default function Projects() {
       <nav>
         <Link to="/home">Home</Link> /
         <Link to="/my-works">My Work</Link> /
-        <a href="#resume"> Resume </a> /
         <a href="#contact"> Contact</a>
       </nav>
 
@@ -30,7 +29,7 @@ export default function Projects() {
             className="project-card"
             onClick={() => setSelectedProject(project)}
           >
-            <img src={project.image} alt={project.title} />
+            <img src={project.image[0]} alt={project.title} />
             <h3>{project.title}</h3>
             {/* Tags */}
             <div className="tags">
@@ -69,11 +68,16 @@ export default function Projects() {
             />
 
             <h2>{selectedProject.title}</h2>
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.title}
-            />
+            <p>{selectedProject.description}</p>
+            <div className="modal-images">
+              {selectedProject.image.map((img, index) => (
+                <img key={index} src={img} alt={`${selectedProject.title} screenshot ${index + 1}`} />
+              ))}
+            </div>
+
+            <p style={{ whiteSpace: "pre-line" }}>{selectedProject.about}</p>
             {/* Tags in modal */}
+            <h3>Technologies: </h3>
             <div className="tags">
               {selectedProject.tags.map((tag, index) => (
                 <span key={index} className="tag">
@@ -81,6 +85,7 @@ export default function Projects() {
                 </span>
               ))}
             </div>
+            <br/>
             <a
               href={selectedProject.link}
               target="_blank"
