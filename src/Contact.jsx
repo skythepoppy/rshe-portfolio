@@ -20,10 +20,10 @@ export default function Contact() {
 
         emailjs
             .send(
-                "your_service_id",   // replace with your service ID
-                "your_template_id",  // replace with your template ID
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 formData,
-                "your_public_key"    // replace with your public key
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             )
             .then(
                 (result) => {
