@@ -121,21 +121,21 @@
 
 .hackathons {
   display: flex;
-  flex-direction: column; /* stack description and cards vertically */
-  gap: 2rem; /* space between text and cards */
+  flex-direction: column; 
+  gap: 2rem; 
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
 .hackathon-text {
-  text-align: center; /* keep description centered */
+  text-align: center; 
 }
 
 .hackathon-cards {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap; /* wrap cards on smaller screens */
+  flex-wrap: wrap; 
 }
 
 

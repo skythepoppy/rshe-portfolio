@@ -4,8 +4,7 @@ import myPhoto from './assets/me.jpg';
 import hackutd from './assets/VAIP2.jpg';
 import aggiehack from './assets/EE.jpg';
 import { FaLaptopCode, FaUserFriends, FaCode } from "react-icons/fa";
-
-
+import {Link} from 'react-router-dom';
 
 export default function App() {
   return (
@@ -18,7 +17,8 @@ export default function App() {
           className="logo"
         />
         <nav>
-          <a href="#projects">Home </a> / <a href="#projects"> My Work </a> /
+          <Link to="/home">Home</Link> /
+          <Link to="/my-works">My Work</Link> /
           <a href="#resume"> Resume </a> / <a href="#contact"> Contact</a>
         </nav>
 
