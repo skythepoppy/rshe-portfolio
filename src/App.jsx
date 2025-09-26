@@ -125,7 +125,7 @@ export default function App() {
               </p>
               <p>
                 <span style={{ color: '#d26640', fontWeight: 'bold' }}>Project:</span>
-                <a href="#projects" style={{ fontWeight: 'bold' }}> Vehicular AI Presets</a>
+                <a href="https://github.com/aerongcanlas/hack-utd-2022" style={{ fontWeight: 'bold' }}> Vehicular AI Presets</a>
               </p>
             </div>
 
