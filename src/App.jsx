@@ -6,6 +6,7 @@ import aggiehack from './assets/EE.jpg';
 import { FaLaptopCode, FaUserFriends, FaCode } from "react-icons/fa";
 import {Link} from 'react-router-dom';
 
+
 export default function App() {
   return (
     <div style={{ display: "flex" }}>
