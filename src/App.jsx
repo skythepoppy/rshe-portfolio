@@ -20,7 +20,7 @@ export default function App() {
         <nav>
           <Link to="/home">Home</Link> /
           <Link to="/my-works">My Work</Link> /
-          <a href="#contact"> Contact</a>
+          <Link to="/contact">Contact</Link>
         </nav>
 
         <section className="about">
