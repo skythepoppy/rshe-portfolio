@@ -2,6 +2,7 @@ import "./App.css";
 import logo from './assets/Raphael_Evangelista.png';
 import myPhoto from './assets/me.jpg';
 import hackutd from './assets/VAIP2.jpg';
+import aggiehack from './assets/EE.jpg';
 import { FaLaptopCode, FaUserFriends, FaCode } from "react-icons/fa";
 
 
@@ -53,7 +54,7 @@ export default function App() {
                 Dev Tools:
               </span>
               <br />
-              HTML/CSS, Javascript, React, TailwindCSS, Bootstrap, Context APIs, Hooks, 
+              HTML/CSS, Javascript, React, TailwindCSS, Bootstrap, Context APIs, Hooks,
             </p>
           </div>
 
@@ -90,7 +91,7 @@ export default function App() {
                 Experiences I draw from:
               </span>
               <br />
-              Remote/In-Person Mathematics and Programming Tutor (with Varsity Tutors and Club Z! Tutoring) 
+              Remote/In-Person Mathematics and Programming Tutor (with Varsity Tutors and Club Z! Tutoring)
             </p>
             <p>
               <span style={{ color: '#d26640', fontWeight: 'bold' }}>
@@ -102,34 +103,55 @@ export default function App() {
           </div>
         </section>
 
-        <nav/>
+        <nav />
 
         <section className="hackathons">
           <div className="hackathon-text">
-            <h3 >Collaboration</h3>
-            <p className="hackathon-text">One of my favorite instances of collaborative teamwork amidst like-minded individuals were the
-              hackathons I attended. 
+            <h3>Collaboration</h3>
+            <p>
+              One of my favorite instances of collaborative teamwork amidst like-minded individuals were the hackathons I attended.
             </p>
+          </div>
+
+          <div className="hackathon-cards">
+            <div className="card">
+              <h3 style={{ color: '#d26640', fontWeight: 'bold' }}>HackUTD</h3>
+              <img src={hackutd} alt="hackutd" className="hackathon-photo" />
+              <p>
+                I had a great time at the 48 hour HACKUTD. As a team, we were able to complete our project
+                "Vehicular AI Presets" under the sponsor company Toyota. This project was presented to Toyota,
+                Statefarm, and CBRE.
+              </p>
+              <p>
+                <span style={{ color: '#d26640', fontWeight: 'bold' }}>Project:</span>
+                <a href="#projects" style={{ fontWeight: 'bold' }}> Vehicular AI Presets</a>
+              </p>
+            </div>
 
             <div className="card">
-            <h3  style={{ color: '#d26640', fontWeight: 'bold' }}>HackUTD</h3>
-            <img src={hackutd} alt="hackutd" className="hackathon-photo" />
-            <p>I had a great time at the 48 hour HACKUTD. As a team , we were able to complete our project
-              "Vehicular AI Presets" under the sponsor company Toyota. This project was presented to Toyota, 
-              Statefarm, and CBRE. 
-            </p>
-            <p>
-              <span style={{ color: '#d26640', fontWeight: 'bold' }}>
-                Project:
-              </span>
-              <a href="#projects" style={{fontWeight:'bold'}}>
-                 Vehicular AI Presets 
-              </a>
-            </p>
-            
-          </div>
+              <h3 style={{ color: '#d26640', fontWeight: 'bold' }}>Aggies Invent</h3>
+              <img src={aggiehack} alt="aggiehack" className="hackathon-photo" />
+              <p>
+                The first hackathon I attended was the A&M Engineering Entrepreneurship Hackathon, where the
+                theme was SOCOM (Special Operations Command). I worked with a team wherein we developed
+                a prototype reconnaissance land-drone (fitted with 4 dc motors, front and rear motion sensors
+                and an imaging sensor)
+              </p>
+              <p>
+                <span style={{ color: '#d26640', fontWeight: 'bold' }}>Project:</span>
+                <a href="https://www.youtube.com/watch?v=cFUjKcirdDk"
+                  style={{ fontWeight: 'bold' }}
+                  target="_blank"
+                  rel="noopener noreferrer"> Hackathon Presentations (2:08:36)</a>
+              </p>
+            </div>
           </div>
         </section>
+
+
+
+
+
 
       </main>
     </div>

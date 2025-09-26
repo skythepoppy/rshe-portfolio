@@ -104,6 +104,7 @@
   margin-top: 0;
   margin-bottom: 10px;
   color: #fff2ec;
+  font-size: 2rem;
 }
 
 .card p {
@@ -120,19 +121,23 @@
 
 .hackathons {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column; /* stack description and cards vertically */
+  gap: 2rem; /* space between text and cards */
   margin-top: 3rem;
   margin-bottom: 3rem;
-  flex-wrap: wrap;
 }
 
 .hackathon-text {
-  flex: 1;
-  min-width: 200px;
-  text-align: center;
-  font-size:2rem;
+  text-align: center; /* keep description centered */
 }
+
+.hackathon-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* wrap cards on smaller screens */
+}
+
 
 .hackathon-text h3{
   margin-top: 0;
@@ -141,8 +146,7 @@
 
 .hackathon-text p{
   line-height: 1.5;
-  
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .hackathon-photo {
