@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import logo from "./assets/Raphael_Evangelista.png";
+import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import projects from "./projectsData";
 
@@ -11,9 +12,9 @@ export default function Projects() {
       <img src={logo} alt="My Logo" className="logo" />
 
       <nav>
-        <Link to="/home">Home</Link> / 
-        <Link to="/my-works">My Work</Link> / 
-        <a href="#resume"> Resume </a> / 
+        <Link to="/home">Home</Link> /
+        <Link to="/my-works">My Work</Link> /
+        <a href="#resume"> Resume </a> /
         <a href="#contact"> Contact</a>
       </nav>
 
@@ -52,7 +53,21 @@ export default function Projects() {
           <div
             className="modal-content"
             onClick={(e) => e.stopPropagation()}
+            style={{ position: "relative" }} // allow absolute positioning for icon
           >
+            {/* Close arrow icon */}
+            <FaArrowLeft
+              onClick={() => setSelectedProject(null)}
+              style={{
+                position: "absolute",
+                top: "50px",
+                left: "20px",
+                cursor: "pointer",
+                color: "#fff2ec",
+                fontSize: "1.5rem",
+              }}
+            />
+
             <h2>{selectedProject.title}</h2>
             <img
               src={selectedProject.image}
@@ -73,9 +88,6 @@ export default function Projects() {
             >
               View on GitHub
             </a>
-            <button onClick={() => setSelectedProject(null)}>
-              Close
-            </button>
           </div>
         </div>
       )}

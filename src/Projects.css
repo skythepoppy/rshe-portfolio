@@ -48,6 +48,32 @@ header p {
   border-radius: 8px;
 }
 
+/* Tags container inside cards or modal */
+.tags {
+  display: flex;
+  flex-wrap: wrap;       /* wrap to next line if too many */
+  gap: 8px;              /* space between tags */
+  margin-top: 10px;
+  justify-content: center;
+}
+
+/* Individual tag styling */
+.tag {
+  background-color: #d26640; /* nice accent color */
+  color: #fff2ec;
+  padding: 4px 12px;
+  border-radius: 20px;       /* makes it pill-shaped */
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: default;
+  transition: transform 0.2s;
+}
+
+.tag:hover {
+  transform: scale(1.05);    /* subtle hover effect */
+}
+
+
 
 
 /* sidebar*/
