@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Projects.css";
 import logo from "./assets/Raphael_Evangelista.png";
 import { FaArrowLeft } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import projects from "./projectsData";
 
@@ -20,6 +21,13 @@ export default function Projects() {
       <header>
         <h1>My Works</h1>
         <p>Some of my projects, experiments, and contributions.</p>
+        <p style={{ fontStyle: 'bold' }}>View the rest here: <a
+          href="https://github.com/skythepoppy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub color="black"/>
+        </a> </p>
       </header>
 
       <section className="projects-grid">
@@ -85,7 +93,7 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <br/>
+            <br />
             <a
               href={selectedProject.link}
               target="_blank"
