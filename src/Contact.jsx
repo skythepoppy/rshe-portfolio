@@ -46,7 +46,7 @@ export default function Contact() {
                 <Link to="/my-works">My Work</Link> /
                 <Link to="/contact">Contact</Link>
             </nav>
-            <h2>Contact Me</h2>
+            <h1>Contact Me</h1>
             <p>Feel free to contact me here or email me directly at: <p style={{fontStyle:'bold'}}>raphaelsebastien.evangelista@gmail.com</p></p>
             <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                 <input

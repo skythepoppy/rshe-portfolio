@@ -28,9 +28,9 @@ export default function App() {
           <div className="about-text">
             <h2>Raphael Evangelista</h2>
             <p>
-              Hi, I’m Raphael! I’m an aspiring software engineer passionate about building
-              meaningful applications. I enjoy working with like-minded people and aim to grow
-              into a development role and eventually a managerial position with a tight-knit team.
+              Hello World, I am Raphael!I am a computer science major and aspiring developer. It's my fundamental
+              believe that as one learns, one is not just a student then, but for life. I am passionate about building
+              meaningful applications and enjoy working with like-minded people in a collaborative environment.
             </p>
           </div>
         </section>
