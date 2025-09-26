@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import logo from './assets/Raphael_Evangelista.png';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "./Contact.css";
 
 export default function Contact() {
@@ -16,10 +17,25 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
-        // TODO: send this somewhere (like EmailJS, backend, etc.)
-        alert("Thanks for reaching out!");
-        setFormData({ name: "", email: "", message: "" });
+
+        emailjs
+            .send(
+                "your_service_id",   // replace with your service ID
+                "your_template_id",  // replace with your template ID
+                formData,
+                "your_public_key"    // replace with your public key
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    alert("Message sent successfully!");
+                    setFormData({ name: "", email: "", message: "" });
+                },
+                (error) => {
+                    console.log(error.text);
+                    alert("Oops! Something went wrong.");
+                }
+            );
     };
 
     return (
@@ -34,8 +50,7 @@ export default function Contact() {
                 <Link to="/my-works">My Work</Link> /
                 <Link to="/contact">Contact</Link>
             </nav>
-            <h1>Contact Me</h1>
-            <p> Feel free to reach out here, or email me directly at : <p style={{fontStyle:'bold'}}>raphaelsebastien.evangelista@gmail.com</p></p>
+            <h2>Contact Me</h2>
             <form className="contact-form" onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -66,3 +81,8 @@ export default function Contact() {
         </div>
     );
 }
+
+
+
+
+
